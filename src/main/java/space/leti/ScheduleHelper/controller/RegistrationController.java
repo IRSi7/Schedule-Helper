@@ -24,6 +24,11 @@ public class RegistrationController {
         return "registration";
     }
 
+    @GetMapping("/home")
+    public String home() {
+        return "Welcome Home!!";
+    }
+
     @PostMapping("/registration")
     public String addUser(@ModelAttribute("userForm") @Valid User userForm, BindingResult bindingResult, Model model) {
 
